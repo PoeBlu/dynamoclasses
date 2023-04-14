@@ -125,7 +125,4 @@ def dynamoclass(
             data_class_kwargs=kwargs,
         )
 
-    if _cls is None:
-        return wrap
-
-    return wrap(_cls)
+    return wrap if _cls is None else wrap(_cls)
